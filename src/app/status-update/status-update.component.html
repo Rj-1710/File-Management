@@ -1,0 +1,18 @@
+<div *ngIf="fileId">
+    <h3>Update File Status</h3>
+  
+    <form [formGroup]="statusForm" (ngSubmit)="onUpdateStatus()">
+      <div class="status-form-group">
+      <label>Select Status:</label>
+      <select formControlName="status">
+        <option value="New">New</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Failed">Failed</option>
+      </select>
+    </div>
+    <div class="button-container">
+      <button type="submit">Update Status</button></div>
+    </form>
+  </div>
+  

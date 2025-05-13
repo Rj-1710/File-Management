@@ -1,0 +1,37 @@
+<h2>File Creation</h2>
+
+<form [formGroup]="createFileForm" (ngSubmit)="onSubmit()"> 
+  <div class="input-group-wrapper">
+    <div class="input-group">
+      <label for="filename">Enter Filename: </label><br>
+      <input type="text" id="filename" formControlName="filename" placeholder="Enter filename" />
+      <p *ngIf="createFileForm.get('filename')?.invalid && createFileForm.get('filename')?.touched" class="error-msg">
+        Filename is required!
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label for="status">Current status:</label><br>
+      <select id="status" formControlName="status">
+        <option value="" disabled selected>Select Status</option>
+        <option value="New">New</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Failed">Failed</option>
+      </select>
+      <p *ngIf="createFileForm.get('status')?.invalid && createFileForm.get('status')?.touched" class="error-msg">
+        *Status is required!
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label for="recordCount">Records in your File:</label><br>
+      <input type="number" id="recordCount" formControlName="recordCount" placeholder="Enter record count"/>
+      <p *ngIf="createFileForm.get('recordCount')?.invalid && createFileForm.get('recordCount')?.touched" class="error-msg">
+        *Record count must be at least 1!
+      </p>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="createFileForm.invalid">Create File</button>
+</form>

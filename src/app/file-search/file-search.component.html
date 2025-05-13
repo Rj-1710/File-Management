@@ -1,0 +1,32 @@
+<h2>Search Files</h2>
+
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+  <div class="label-row"> 
+    <label>Filename:</label>
+    <input type="text" formControlName="filename" />
+
+    <label>Status:</label>
+    <select formControlName="status">
+      <option value="New">New</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+      <option value="Failed">Failed</option>
+    </select>
+  </div>
+
+  <div class="button-container">
+    <button type="submit">Search</button>
+  </div>
+</form>
+
+
+<div *ngIf="searchResults.length" class="search-results">
+  <h3>Search Results</h3>
+  <div *ngFor="let file of searchResults">
+    <p><strong>ID:</strong> {{ file.id }}</p>
+    <p><strong>Filename:</strong> {{ file.fileName }}</p>
+    <p><strong>Status:</strong> {{ file.status }}</p>
+    <p><strong>Record Count:</strong> {{ file.recordCount }}</p>
+    <p><strong>Created Date:</strong> {{ file.localdate }}</p>
+  </div>
+</div>

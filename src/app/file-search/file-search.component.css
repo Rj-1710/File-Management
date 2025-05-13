@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3b5998, #192f6a); 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.form-container {
+    background: white; 
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px; 
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+.label-row {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    border-left: 5px solid #FFD700;
+    border-radius: 6px;
+    text-align: center;
+    width: fit-content;
+    display: inline-block;
+}
+
+input, select {
+    width: 150px;
+    padding: 10px;
+    border: 2px solid #222;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+}
+
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff8c00, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: fit-content;
+    display: block;
+    
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff4b2b, #c0392b);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+h3{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.search-results {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-results p {
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    padding: 10px;
+    border-left: 5px solid #FFD700;
+    border-radius: 6px;
+    display: block;
+    margin: 8px 0;
+}

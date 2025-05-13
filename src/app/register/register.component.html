@@ -1,0 +1,13 @@
+<h1>Sign Up</h1>
+<div class="container">
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <label>Username:</label>
+  <input type="text" formControlName="username" />
+
+  <label>Password:</label>
+  <input type="password" formControlName="password" />
+
+  <button type="submit">Register Now!</button>
+  <p>Have an Account? <a [routerLink]= "'/login'">Login Here</a></p>
+</form>
+</div>

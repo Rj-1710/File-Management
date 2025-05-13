@@ -1,0 +1,27 @@
+<h2>File Operations Dashboard</h2>
+
+<div class="link-container-wrapper">
+  <div class="link-container">
+    <p>Wanna Create a new File?</p><br>
+    <a [routerLink]="'/create-file'">Create New File</a>
+  </div>
+
+  <div class="link-container">
+    <p>Wanna Update a File?</p><br>
+    <a [routerLink]="'/file-details'">View and Update</a>
+  </div>
+
+  <div class="link-container">
+    <p>Looking for a File?</p><br>
+    <a [routerLink]="'/file-search'">Search Your File</a>
+  </div>
+
+  <div class="link-container">
+    <p>Wanna Create multiple files?</p><br>
+    <nav>
+      <a [routerLink]="'/batch-runner'">Run Batch Job</a>
+    </nav>
+  </div>
+</div>
+
+<button class="logout-btn" (click)="logout()">Logout</button>

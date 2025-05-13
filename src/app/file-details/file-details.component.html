@@ -1,0 +1,21 @@
+<h2>File Details Page</h2>
+<div class="form-container">
+<label for="fileId">Enter File ID:</label>
+<input type="number" id="fileId" [(ngModel)]="fileId" placeholder="Enter ID" />
+</div>
+<div class="button-container">
+<button (click)="fetchFileDetails()">Get File Details</button> </div>
+
+<div *ngIf="fileData" class="file-details">
+  <h3>File Information</h3>
+  <p><strong>ID:</strong> {{ fileData.id }}</p>
+  <p><strong>Filename:</strong> {{ fileData.fileName }}</p>
+  <p><strong>Status:</strong> {{ fileData.status }}</p>
+  <p><strong>Record Count:</strong> {{ fileData.recordCount }}</p>
+  <p><strong>Created Date:</strong> {{ fileData.localdate }}</p>
+
+  <app-status-update [fileId]="fileData.id"></app-status-update>
+</div>
+
+
+
